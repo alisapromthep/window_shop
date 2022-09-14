@@ -29,9 +29,10 @@ function App() {
 
   const handleMenu = ()=>{
     setMenuOpen(true);
-    console.log('menu')
   }
-
+  const handleCloseMenu = ()=>{
+    setMenuOpen(false);
+  }
 
 
   
@@ -39,7 +40,7 @@ function App() {
     <ThemeProvider theme={theme}>
         <NavBar handleMenu={handleMenu} menuOpen={menuOpen} categoryData={categoryData}/>
         <Box sx={{display: menuOpen ? "inlined": "none",}}>
-          <MenuList categoryData={categoryData}/>
+          <MenuList categoryData={categoryData} handleCloseMenu={handleCloseMenu}/>
         </Box>
       <Router>
         <Switch>

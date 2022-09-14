@@ -2,14 +2,16 @@ import React from 'react';
 import {Container, MenuItem} from '@mui/material';
 
 
-const MenuList = ({categoryData}) => {
+const MenuList = ({categoryData, handleCloseMenu}) => {
 
     return (
         <Container>
             {
                 categoryData.map((category,index)=>{
                     return (
-                        <MenuItem key={index}>
+                        <MenuItem key={index}
+                        onClick={handleCloseMenu}
+                        >
                         {category}
                         </MenuItem>
                     );
