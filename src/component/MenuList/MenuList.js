@@ -1,11 +1,11 @@
 import React from 'react';
-import {Menu, MenuItem} from '@mui/material';
+import {Container, MenuItem} from '@mui/material';
 
 
 const MenuList = ({categoryData}) => {
 
     return (
-        <Menu>
+        <Container>
             {
                 categoryData.map((category,index)=>{
                     return (
@@ -15,7 +15,7 @@ const MenuList = ({categoryData}) => {
                     );
                 })
             }
-        </Menu>
+        </Container>
     )
 }
 

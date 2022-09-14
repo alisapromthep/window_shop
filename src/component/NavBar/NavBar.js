@@ -1,19 +1,19 @@
 import React from 'react';
-import { AppBar,Toolbar, IconButton, Typography  } from '@mui/material';
+import { AppBar,Toolbar, IconButton, Typography,Box  } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import MenuList from '../MenuList/MenuList';
 
 
-const NavBar = ({categoryData}) => {
+
+const NavBar = ({handleMenu}) => {
     return (
         <AppBar position='static'
         elevation={0}>
             <Toolbar>
-                <IconButton>
+                <IconButton onClick={handleMenu}>
                     <MenuIcon/>
-                    <MenuList categoryData={categoryData}/>
                 </IconButton>
                 <IconButton>
                     <SearchIcon/>
