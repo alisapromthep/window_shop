@@ -9,7 +9,7 @@ import Home from './pages/Home/Home';
 import MenuList from './component/MenuList/MenuList';
 import { Box } from '@mui/material';
 
-const API_URL = "https://fakestoreapi.com"
+const API_URL = "https://fakestoreapi.com";
 
 function App() {
 
@@ -45,7 +45,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact>
-            <Home/>
+            <Home API_URL={API_URL}/>
           </Route>
         </Switch>
       </Router>
