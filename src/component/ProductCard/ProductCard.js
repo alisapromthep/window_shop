@@ -4,20 +4,20 @@ import { Button, CardActionArea, CardActions, Typography, CardMedia, CardContent
 const ProductCard = ({name, image, price}) => {
 
     return (
-        <Card>
+        <Card elevation={0}>
             <CardContent>
-                <Typography>card</Typography>
                 <Typography>{name}</Typography>
             </CardContent>
             <CardMedia
             component="img"
-            height="10rem"
+            height="200"
             image={image}
             alt=""
+            sx={{objectFit:"contain"}}
             />
             <CardActions>
-                <Button>
-                    {`add ${price}`}
+                <Button variant="outlined" fullWidth="true">
+                    {`add $${price}`}
                 </Button>
             </CardActions>
         </Card>

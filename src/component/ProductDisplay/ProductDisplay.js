@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from 'react-material-ui-carousel';
 import { Typography, Stack, Container } from '@mui/material';
 import ProductCard from '../ProductCard/ProductCard';
 
@@ -10,7 +11,18 @@ const ProductDisplay = ({title,productInfo}) => {
             <Typography variant="h2">
                 {title}
             </Typography>
-            <Stack spacing={2}>
+            <Carousel>
+            {productInfo.map((product,i)=>{
+                return (
+                    <ProductCard key={i}
+                    name={product.title}
+                    image={product.image}
+                    price={product.price}
+                    />
+                )
+            })}
+            </Carousel>
+            <Stack spacing={2} sx={{display:{mobile:"none"}}}>
             {productInfo.map((product,i)=>{
                 return (
                     <ProductCard key={i}
